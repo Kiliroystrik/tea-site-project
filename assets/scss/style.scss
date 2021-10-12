@@ -1,0 +1,305 @@
+/* *****************************************************************
+TOOLS
+***************************************************************** */
+
+* {
+  box-sizing: border-box; /* On spécifie que la largeur (width) de chaque boîte comprend le padding et la bordure (par défaut, c'est seulement la largeur du contenu) */
+}
+
+html {
+  font-size: 62.5%; /* 1rem = 10px (la formule est 10/16*100) la taille par défaut étant 16px */
+}
+
+body {
+  font-size: 1.6rem; /* on remets la taille du texte par défaut pour le body à 16px en utilisant les rem comme unité) */
+  margin: 0;
+  padding: 0;
+  font-family: "Hachi Maru Pop", cursive;
+}
+
+// VARIABLES
+
+// COLORS
+// $color-secondary:#72238c8f;
+// $color-secondary-a:rgba(148, 25, 172, 0.568);
+$color-secondary: #8c0500;
+$color-secondary-a: #8c050077;
+
+@keyframes swing {
+  15% {
+    -webkit-transform: translateY(5px);
+    transform: translateY(5px);
+  }
+  30% {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
+  50% {
+    -webkit-transform: translateY(3px);
+    transform: translateY(3px);
+  }
+  65% {
+    -webkit-transform: translateY(-3px);
+    transform: translateY(-3px);
+  }
+  80% {
+    -webkit-transform: translateY(2px);
+    transform: translateY(2px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade {
+  10% {
+    opacity: 0.8;
+  }
+  20% {
+    opacity: 0.6;
+  }
+  30% {
+    opacity: 0.4;
+  }
+  40% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0.2;
+  }
+  70% {
+    opacity: 0.4;
+  }
+  80% {
+    opacity: 0.6;
+  }
+  90% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+h1,
+h2,
+h3 {
+  text-transform: uppercase;
+}
+p {
+  margin: 0;
+  padding: 0;
+}
+
+//ALL NAV LINKS PROPERTIES
+@mixin nav-button {
+  display: block;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-size: 2em;
+  font-weight: bold;
+  padding: 1.5em 3em;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  transition: background ease-in-out 0.5s;
+  &:hover {
+    box-shadow: $color-secondary-a;
+    background: $color-secondary-a;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1920px;
+}
+
+.current {
+  box-shadow: $color-secondary-a;
+  background: $color-secondary-a;
+}
+
+.greeting {
+  font-size: 5em;
+  margin: 1.5em 0;
+  font-weight: bold;
+  border: solid $color-secondary-a 5px;
+  animation: fade 2s ease-in-out;
+  animation-iteration-count: infinite;
+  ::before {
+    content: "(Irashaimase)";
+    position: relative;
+    top: 85px;
+    left: 650px;
+  }
+}
+
+.add {
+  display: block;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-size: 2em;
+  font-weight: bold;
+  padding: 1em;
+  background: $color-secondary;
+  box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  transition: background ease-in-out 0.5s;
+  &:hover {
+    box-shadow: rgb(25, 126, 121);
+    background-color: rgb(25, 126, 121);
+  }
+}
+
+header {
+  background: url("../img/bel.jpg") no-repeat center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  // CONNECTION
+  div:first-child {
+    top: 0;
+    padding-top: 1%;
+    margin-right: 2%;
+    display: flex;
+    justify-content: flex-end;
+    a {
+      display: flex;
+      justify-content: flex-end;
+      text-decoration: none;
+      i {
+        font-size: 3em;
+        color: white;
+        transition: ease-in 0.5s;
+        &:hover {
+          opacity: 1;
+          color: $color-secondary-a;
+        }
+      }
+    }
+  }
+  // NAVIGATION
+  nav {
+    ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 15em;
+      transition: ease-in-out 0.5s;
+      padding: 0;
+      li {
+        list-style: none;
+        // transition: ease-in 0.5s;
+        &:hover {
+          // margin-bottom: 2em;
+          animation: swing 1s ease;
+          animation-iteration-count: 1;
+        }
+        a {
+          @include nav-button;
+        }
+      }
+    }
+  }
+  // LOGO
+  div:nth-child(2) {
+    display: flex;
+    justify-content: center;
+    a {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      transition: color ease-in-out 0.5s;
+      margin: 0;
+      padding: 0;
+      text-decoration: none;
+      text-align: center;
+      &:hover {
+        color: $color-secondary-a;
+      }
+
+      p:first-child {
+        font-size: 20em;
+        margin-bottom: 0px;
+      }
+      p:nth-child(2) {
+        font-size: 2em;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+main {
+  div {
+    text-align: center;
+    h1 {
+      margin-top: 0;
+    }
+    section {
+      // ARTICLE BDO
+      div {
+        display: flex;
+        article {
+          border: $color-secondary solid 2px;
+          margin: 3em 1em;
+          padding: 2em 0;
+          &:hover {
+            background: #0f0f0f21;
+          }
+          h3 {
+            color: $color-secondary;
+            text-decoration: overline;
+            font-weight: bold;
+            font-size: 2.5em;
+          }
+          img {
+            max-height: 400px;
+            border: solid 2px;
+            padding: 3em;
+          }
+          .price {
+            display: block;
+            font-weight: bold;
+            font-size: 2em;
+            margin: 2em 0;
+            border: solid 3px;
+          }
+          & :nth-child(4) {
+            padding: 1em 0;
+            margin: 2em 0;
+            border: solid 2px;
+          }
+        }
+      }
+    }
+  }
+}
+
+footer {
+  background: rgb(25, 126, 121) url("../img/footer.jpg") no-repeat center;
+  background-size: cover;
+  // height: 800px;
+  color: white;
+  div {
+    display: flex;
+    ul {
+      list-style: none;
+
+      a {
+        text-decoration: none;
+        color: white;
+        @include nav-button();
+      }
+    }
+  }
+}

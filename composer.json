@@ -1,0 +1,15 @@
+{
+  "name": "borge/newtheaproject",
+  "authors": [
+    {
+      "name": "Mathieu Borges",
+      "email": "borges.mathieu@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "app\\": "./"
+    }
+  },
+  "require": {}
+}
