@@ -1,5 +1,4 @@
 <?php
-include '../template/header.php';
 
 //CHECK IF FORM WAS SENT
 if (!empty($_POST)) {
@@ -60,8 +59,3 @@ if (!empty($_POST)) {
     <button type="submit">M'inscrire</button>
 
 </form>
-
-<?php
-
-include '../template/footer.php'
-?>

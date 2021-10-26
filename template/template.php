@@ -16,14 +16,14 @@
     <header>
         <!-- LOGGING -->
         <div>
-            <a href="../view/inscription.php"><i class="fas fa-leaf"></i></a>
+            <a href="inscription"><i class="fas fa-leaf"></i></a>
             <a href="#"><i class="fas fa-door-open"></i></a>
             <a href="#"><i class="fas fa-shopping-basket"></i></a>
         </div>
 
 
         <div>
-            <a href="index.php">
+            <a href="acceuil">
                 <p>茶</p>
                 <p>Tout le thé du japon</p>
             </a>
@@ -31,7 +31,7 @@
 
         <nav>
             <ul>
-                <li><a href="view/tea.php">Thés</a></li>
+                <li><a href="tea">Thés</a></li>
                 <li><a href="#">Accessoires</a></li>
                 <li><a href="#">Cérémonie</a></li>
                 <li><a href="#">Contact</a></li>
@@ -39,7 +39,7 @@
         </nav>
     </header>
     <main>
-        <?php var_dump("hello it's working") ?>
+        <?php require_once $path; ?>
     </main>
     <footer>
 
@@ -54,48 +54,6 @@
         </div>
         <!--******************************************************CUP OF TEA*************************************************************            -->
 
-        <div>
-            <div class="container">
-                <nav>
-                    <ul>
-                        <!--strong-->
-                        <li><a href="#">Cup of tea</a></li>
-                        <li><a href="#">Notre histoire</a></li>
-                        <li><a href="#">Nos boutiques</a></li>
-                        <li><a href="#">Le thé de A à Z</a></li>
-                        <li><a href="#">Espace clients professionnels</a></li>
-                        <li><a href="#">Recrutement</a></li>
-                        <li><a href="#">Contactez-nous!</a></li>
-                        <li><a href="#">L'Ecole du thé</a></li>
-                    </ul>
-                </nav>
-
-
-                <!--******************************************************COMMENDEZ EN LIGNE*************************************************************            -->
-                <nav>
-                    <ul>
-                        <li><a href="#">Commandez en ligne</a></li>
-                        <li><a href="#">Première visite</a></li>
-                        <li><a href="#">Aide - FAQ</a></li>
-                        <li><a href="#">Service client</a></li>
-                        <li><a href="#">Suivre ma commande</a></li>
-                        <li><a href="#">Conditions générales de vente</a></li>
-                        <li><a href="#">Informations légales</a></li>
-                    </ul>
-                </nav>
-
-                <!--******************************************************SUIVEZ-NOUS*************************************************************            -->
-                <nav>
-                    <ul>
-                        <li><a href="#">Suivez-nous</a></li>
-                        <li><a href="#">Notre histoire</a></li>
-                        <li><a href="#">Nos boutiques</a></li>
-                        <li><a href="#">le thé de A à Z</a></li>
-                        <li><a href="#">Espace clients professionnels</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div> <!-- end of .container -->
         <!--******************************************************LICENSE*************************************************************            -->
 
         <div>

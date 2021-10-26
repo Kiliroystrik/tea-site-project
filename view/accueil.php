@@ -1,5 +1,3 @@
-<?php require 'template/header.php' ?>
-
 <main>
     <div class="container">
         <!-- SLIDER -->
@@ -8,7 +6,8 @@
         <section>
             <h2>La selection du moment</h2>
             <div>
-                <?php require_once 'controller/Article.php' ?>
+                <p>this is an article</p>
+                <?php $article ?>
             </div>
 
         </section>
@@ -17,8 +16,6 @@
 
     </div>
 </main>
-
-<?php require 'template/footer.php' ?>
 
 </body>
 

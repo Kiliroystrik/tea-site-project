@@ -5,7 +5,6 @@ namespace app\core;
 
 class Connect
 {
-
     private $_host;
     private $_dbName;
     private $_user;
