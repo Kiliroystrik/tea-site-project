@@ -1,15 +1,9 @@
 <?php
-require_once __DIR__.'/vendor/autoload.php';
-use app\core\Application;
+require_once __DIR__ . '/vendor/autoload.php';
 
-$app = new Application();
+use app\core\Router;
+use app\core\Connect;
 
-$app->router->get('/', function(){
-    return "Hello guys";
-});
+$route = new Router;
 
-$app->router->get('/contact', function(){
-    return 'Contact';
-});
-
-$app->run();
+$route->route();

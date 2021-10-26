@@ -1,5 +1,8 @@
 <?php
-require_once 'core/Connect.php';
+
+namespace app\model;
+
+use app\core\Connect;
 
 class Article
 {
